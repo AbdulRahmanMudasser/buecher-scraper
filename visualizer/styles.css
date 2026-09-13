@@ -1,0 +1,145 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --page: #f8f4ea;
+  --paper: #fffdf8;
+  --text: #1d1d1c;
+  --muted: #6d6a60;
+  --line: #bdb6a7;
+  --line-soft: #e7e0d3;
+  --header: #2b2a25;
+  --header-text: #fffaf2;
+  --cell: #fffdf8;
+  --cell-alt: #f7f1e7;
+}
+
+body {
+  margin: 0;
+  color: var(--text);
+  background: var(--page);
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.4;
+}
+
+.app-shell {
+  min-height: 100vh;
+  background: var(--page);
+}
+
+.site-header {
+  border-bottom: 1px solid var(--line);
+  background: var(--paper);
+  padding: 20px 32px;
+}
+
+.site-header h1 {
+  margin: 0;
+  font-size: 30px;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  color: var(--header);
+}
+
+.catalogue-wrap {
+  max-width: 1700px;
+  margin: 0 auto;
+  padding: 24px 18px 60px;
+}
+
+.catalogue-panel {
+  background: var(--paper);
+  border: 1px solid var(--line-soft);
+}
+
+.table-wrap {
+  width: 100%;
+  overflow-x: auto;
+}
+
+#books-table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  table-layout: auto;
+  background: var(--paper);
+}
+
+#books-table thead tr {
+  background: var(--header);
+}
+
+#books-table th {
+  color: var(--header-text);
+  background: var(--header);
+  border: 1px solid var(--line);
+  font-size: 12px;
+  font-weight: 600;
+  padding: 12px 10px;
+  text-align: left;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+#books-table td {
+  border: 1px solid var(--line-soft);
+  padding: 11px 10px;
+  font-size: 13px;
+  color: var(--text);
+  background: var(--cell);
+  vertical-align: top;
+}
+
+#books-table tbody tr:nth-child(even) td {
+  background: var(--cell-alt);
+}
+
+#books-table tbody tr:hover td {
+  background: #f3ede4;
+}
+
+.cover-cell {
+  width: 80px;
+}
+
+.cover-cell img {
+  display: block;
+  width: 56px;
+  height: 72px;
+  object-fit: cover;
+  border: 1px solid var(--line);
+  background: var(--paper);
+}
+
+.cover-missing {
+  width: 56px;
+  height: 72px;
+  border: 1px dashed var(--line);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--muted);
+  font-size: 11px;
+}
+
+.empty-state {
+  padding: 40px 20px;
+  color: var(--muted);
+  font-size: 14px;
+  background: var(--paper);
+}
+
+@media (max-width: 900px) {
+  .site-header {
+    padding: 16px 20px;
+  }
+
+  .site-header h1 {
+    font-size: 24px;
+  }
+
+  .catalogue-wrap {
+    padding: 12px;
+  }
+}
