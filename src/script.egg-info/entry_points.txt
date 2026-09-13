@@ -1,0 +1,2 @@
+[console_scripts]
+script = script.cli:main
